@@ -39,6 +39,7 @@
             annotationView.centerOffset = [model.centerOffset toCGPoint];
         }
         annotationView.canShowCallout = model.canShowCallout;
+        annotationView.layer.anchorPoint = CGPointMake(0.5, 0.5);
         [annotationView setTransform:CGAffineTransformMakeRotation(model.heading * M_PI / 180)];
         annotationView.selected = model.selected;
         annotationView.draggable = model.draggable;
